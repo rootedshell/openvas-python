@@ -106,7 +106,7 @@ try:
       time.sleep( 0.1 )
 
     while( lock.locked() ):
-      sys.stdout.write( "zZz" )
+      sys.stdout.write( "#" )
       sys.stdout.flush()
       time.sleep( 1 )
     # --
