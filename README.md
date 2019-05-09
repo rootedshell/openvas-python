@@ -1,2 +1,2 @@
 # openvas-python
-Network scan python script.
+Network scan - Python script.
