@@ -151,8 +151,6 @@ try:
 
       getRep = ("omp -u admin -w password --get-report %s --format 9087b18c-626c-11e3-8892-406186ea4fc5 > %s") % (repID, repName)
 
-
-
       runme = subprocess.call([getRep],shell=True)
 
       print '[+] Report should be done in : ' + GREEN +  str(repName) + ENDC
