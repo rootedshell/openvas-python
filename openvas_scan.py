@@ -36,7 +36,7 @@ try:
 
   ##
   # create target for new scan:
-  cmd = "omp -u admin -w Raj@123 --xml='<create_target> <name>"+target+"</name> <hosts>"+target+"</hosts> </create_target>' > tmp.resp"
+  cmd = "omp -u admin -w password --xml='<create_target> <name>"+target+"</name> <hosts>"+target+"</hosts> </create_target>' > tmp.resp"
   runme = subprocess.call([cmd],shell=True)
 
   readRespForID = open('tmp.resp','r')
@@ -54,7 +54,7 @@ try:
   ##
   # prepare scan options (default full scan):
   configID = "daba56c8-73ec-11df-a475-002264764cea" # default mode: full and fast scan ;)
-  cmd = "omp -u admin -w Raj@123 --xml='<create_task> <name>Full and fast scan</name> <comment>Full and fast</comment> <config id=\""+ configID +"\"/> <target id=\""+ targetID +"\"/> </create_task>' > tmp.task"
+  cmd = "omp -u admin -w password --xml='<create_task> <name>Full and fast scan</name> <comment>Full and fast</comment> <config id=\""+ configID +"\"/> <target id=\""+ targetID +"\"/> </create_task>' > tmp.task"
 
   print '[+] Preparing options for the scan...'
   runme = subprocess.call([cmd],shell=True)
@@ -76,14 +76,14 @@ try:
   print GREEN + '[+] Running scan for '+ ENDC +  RED + str(target) + ENDC
 
   # yep, you will be asked for a pass here ;) # 05.01.17; not anymore
-  cmd = "omp -u admin -w Raj@123 --xml='<start_task task_id=\""+ taskID + "\"/>' > tmp.startID"
+  cmd = "omp -u admin -w password --xml='<start_task task_id=\""+ taskID + "\"/>' > tmp.startID"
   runme = subprocess.call([cmd], shell=True)
   print GREEN + '[+] Scan started... ' + ENDC + 'To get current status, see below:\n\t' + ENDC# or type: omp -u admin -G'
   print YELLOW # 01
   # sleep few secs to get -G with our target:
   time.sleep(3)
 
-  cmd2 = "omp -u admin -w Raj@123 -G | grep %s > tmp.stat" % ( taskID)
+  cmd2 = "omp -u admin -w password -G | grep %s > tmp.stat" % ( taskID)
   # print cmd2
   runme = subprocess.call([cmd2],shell=True)
 
@@ -123,7 +123,7 @@ try:
   # reports
   print CYAN + '[+] Generating Reports...' + ENDC
 
-  getXml = "omp -u admin -w Raj@123 -X '<get_reports/> <report id><task id=\""+ str(taskID)  +"\"/>' > get.xml"
+  getXml = "omp -u admin -w password -X '<get_reports/> <report id><task id=\""+ str(taskID)  +"\"/>' > get.xml"
   #print getXml
 
   rungetXml = subprocess.call([getXml],shell=True)
@@ -149,7 +149,7 @@ try:
       print ENDC
       repName = 'Report_for_'+str(target)+'.csv'
 
-      getRep = ("omp -u admin -w Raj@123 --get-report %s --format 9087b18c-626c-11e3-8892-406186ea4fc5 > %s") % (repID, repName)
+      getRep = ("omp -u admin -w password --get-report %s --format 9087b18c-626c-11e3-8892-406186ea4fc5 > %s") % (repID, repName)
 
 
 
