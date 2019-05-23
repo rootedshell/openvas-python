@@ -1,0 +1,58 @@
+Report Export Format-ID for OpenVas
+
+------------------------------------------------------------------------------------
+Command:
+omp -u admin -w Raj@123 --get-report <target_id> --format 6c248850-1f62-11e1-b082-406186ea4fc5 > <target_id>
+
+------------------------------------------------------------------------------------
+
+Anonymous XML
+5057e5cc-b825-11e4-9d0e-28d24461215b
+
+ARF
+910200ca-dc05-11e1-954f-406186ea4fc5
+
+CPE
+5ceff8ba-1f62-11e1-ab9f-406186ea4fc5
+
+CSV Hosts
+9087b18c-626c-11e3-8892-406186ea4fc5
+
+CSV Results
+c1645568-627a-11e3-a660-406186ea4fc5
+
+HTML
+6c248850-1f62-11e1-b082-406186ea4fc5
+
+ITG
+77bd6c4a-1f62-11e1-abf0-406186ea4fc5
+
+LaTeX
+a684c02c-b531-11e1-bdc2-406186ea4fc5
+
+NBE
+9ca6fe72-1f62-11e1-9e7c-406186ea4fc5
+
+PDF
+c402cc3e-b531-11e1-9163-406186ea4fc5
+
+Topology SVG
+9e5e5deb-879e-4ecc-8be6-a71cd0875cdd
+
+TXT
+a3810a62-1f62-11e1-9219-406186ea4fc5
+
+Verinice ISM
+c15ad349-bd8d-457a-880a-c7056532ee15
+
+Verinice ITG
+50c9950a-f326-11e4-800c-28d24461215b
+
+XML
+a994b278-1f62-11e1-96ac-406186ea4fc5
+
+
+------------------------------------------------------------------------------------
+#rootedshell
+
+
