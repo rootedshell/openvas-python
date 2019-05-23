@@ -2,7 +2,7 @@ Report Export Format-ID for OpenVas
 
 ------------------------------------------------------------------------------------
 Command:
-omp -u admin -w Raj@123 --get-report <target_id> --format 6c248850-1f62-11e1-b082-406186ea4fc5 > <target_id>
+omp -u <username> -w <password> --get-report <target_id> --format 6c248850-1f62-11e1-b082-406186ea4fc5 > <target_id>
 
 ------------------------------------------------------------------------------------
 
